@@ -7,6 +7,21 @@ Table of Contents:
     3. Areas
     4. Media Queries
 ////////////////////////////////////////////////////////////////////////*/
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --small-bg-color: #F69051;
+    --medium-bg-color: #F26D40;
+    --large-bg-color: #260803;
+    --box-bg-color:#F9C48B;
+    --default-margin: 16px;
+
+}
 
 /*////////////////////////
     1. Global Styles
@@ -15,21 +30,72 @@ Table of Contents:
 body {
     font-family: 'Dosis', sans-serif;
     font-weight: 400;
+    background-color: var(--small-bg-color);
 }
 
-/*////////////////////////
-    2. Typography
-////////////////////////*/
+
+
+    /*////////////////////////
+        2. Typography
+    ////////////////////////*/
+
+
 
 
 
 /*////////////////////////
     3. Areas
 ////////////////////////*/
+body {
+    display: flex;
+    flex-basis: 1000px;
+    flex-direction: column;
+    align-content: space-between;
 
+}
 
+section{
+    margin: 5px;
+    border-radius: 5px;
+    background-color: var(--box-bg-color);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 100%;
+    border-radius: 5px;
+}
 
 
 /*////////////////////////
     2. Media Queries
 ////////////////////////*/
+
+
+    html {
+        /* voor mobiel */
+        font-size: 16px;
+    }
+
+    @media screen and (min-width: 900px) {
+        /* voor tablets */
+        html {
+            font-size: 18px;
+        }
+        body {
+            background-color: var(--medium-bg-color);
+        }
+
+    }
+
+    @media screen and (min-width: 1200px) {
+        /* voor desktops en groter */
+        html {
+            font-size: 20px;
+        }
+
+        body {
+            background-color: var(--large-bg-color);
+        }
+    }
